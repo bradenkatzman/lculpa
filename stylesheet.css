@@ -1,0 +1,46 @@
+h1 
+{
+	background-color: red;
+	font-family: sans-serif;
+	font-size: 45px;
+	text-align: center;
+	margin: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	position: top;
+
+}
+
+h2
+{
+	background-color: tan;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-align: center;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+aside 
+{
+	background-color: silver;
+	width: 175px;
+	height: 520px;
+	padding: 25px;
+}
+
+#about
+{
+	position: relative;
+	left: 250px;
+	bottom: 550px;
+	width: 560px;
+	font-size: 20px;
+}
+
+#links
+{
+	position: relative;
+	bottom: 600px;
+	left: 700px;
+}
