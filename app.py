@@ -7,7 +7,6 @@ app.config['DEBUG'] = True
 
 # MongoDB Config
 app.config['MONGODB_SETTINGS'] = {
-    # 'host': "mongodb://admin:columbia@ds029051.mongolab.com:29051/exchangeatcu"
      'host': 'mongodb://localhost/lculpa'
 }
 
@@ -20,7 +19,6 @@ class Review(db.Document):
     classes = db.StringField(required=True)
     summary = db.StringField(required=True)
     workload = db.StringField(required=True)
-
 
 @app.route("/", methods=['GET', 'POST'])
 def index():

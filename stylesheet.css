@@ -21,26 +21,13 @@ h2
 	padding-right: 40px;
 }
 
-aside 
+#departments 
 {
 	background-color: silver;
-	width: 175px;
-	height: 520px;
-	padding: 25px;
+	text-align: center;
 }
 
 #about
 {
-	position: relative;
-	left: 250px;
-	bottom: 550px;
-	width: 560px;
 	font-size: 20px;
-}
-
-#links
-{
-	position: relative;
-	bottom: 600px;
-	left: 700px;
 }
