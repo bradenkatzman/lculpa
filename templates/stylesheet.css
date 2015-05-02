@@ -1,0 +1,35 @@
+.navbar-default
+{
+	background-color: black;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #333;
+}
+
+.page-header
+{
+	background-color: red;
+}
+
+h5
+{
+	background-color: tan;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-align: center;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#departments 
+{
+	background-color: silver;
+	text-align: center;
+}
+
+#about
+{
+	font-size: 20px;
+}

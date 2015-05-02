@@ -20,8 +20,8 @@ class Review(db.Document):
     summary = db.StringField(required=True)
     workload = db.StringField(required=True)
 
-@app.route("/", methods=['GET', 'POST'])
-def index():
+@app.route("/submitreview", methods=['GET', 'POST'])
+def review():
 	if request.method == 'POST':
 		name = request.form["name"]
 		department = request.form["department"]
@@ -35,6 +35,10 @@ def index():
 		return redirect("/")
 	return render_template('home.html', reviews=Review.objects)
 
+
+@app.route("/", methods=['GET'])
+def index():
+	return render_template('index.html')
 
 if __name__ == "__main__":
     app.run()
