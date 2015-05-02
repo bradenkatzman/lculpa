@@ -5,14 +5,18 @@
   <div class="container-fluid">
 
      <form action="/" method="post" enctype="multipart/form-data"> 
-      <input type="text" name="review">
+      <input type="text" name="name"><br>
+      <input type="text" name="department"><br>
+      <input type="text" name="classes"><br>
+      <input type="text" name="summary"><br>
+      <input type="text" name="workload"><br>
       <input type="submit" value="add">
      </form>
     
     <!-- loops through review objects -- enhanced for loop -->
     {% for review in reviews %}
 
-    <p> {{review.name}} </p>
+    <p> {{review.name}} {{review.department}} {{review.classes}} {{review.summary}} {{review.workload}} </p>
 
     {% endfor %}
   </div>
