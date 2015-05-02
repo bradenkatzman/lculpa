@@ -23,3 +23,6 @@ $ mongo
 > use lculpa
 switched to db lculpa
 > db.review.find()
+
+(pushing commits to github - post commit)
+$ git push -u origin master
