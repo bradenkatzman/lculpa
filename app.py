@@ -40,6 +40,13 @@ def review():
 def index():
 	return render_template('index.html')
 
+@app.route('/results', methods=['GET'])
+def results():
+	strrequest = str(request)
+	searchKey, garbage = (strrequest[47:]).split('\'')
+	print searchKey
+	return render_template('results.html', searchKey=searchKey, reviews=db.review)
+
 @app.route("/completedreview", methods=['GET'])
 def completed():
 	return render_template('completedreview.html')

@@ -16,6 +16,11 @@
 	border-color: red;
 }
 
+h1
+{
+	text-align: center;
+}
+
 h2
 {
 	text-align: center;
@@ -40,4 +45,14 @@ h5
 #about
 {
 	font-size: 20px;
+}
+
+#submission
+{
+	text-align: center;
+}
+
+#results
+{
+	text-align: center;
 }

@@ -36,21 +36,29 @@
 <br>
 
     <div class="page-header">
-			<h1>LCULPA<small> An app for the List College Community </small></h1>
+			<h1>LCULPA<br><small> An App for the List College Community </small></h1>
 		</div>
 
     <div class="jumbotron">
         <div class="container-fluid">
             <p>
             	<strong>Welcome to LCULPA!</strong><br>
-            	LCULPA was founded to give List College students an opportunity to speak theirs mind, and to share the wisdom that they have gleaned from the precious time they've spent in classrooms ahead of you - and for you to do the same for others!
+            	LCULPA was founded to give List College students an opportunity to speak their minds, and to share the wisdom that they have gleaned from the precious time they've spent in classrooms ahead of you - and for you to do the same for others!
             </p>
         </div>
     </div>
 
     <h2><em>Explore</em></h2>
 
-     <div class="container-fluid">
+    <br>
+    <div class="container-fluid" align="center">
+
+     <form action="/results" method="get"> 
+      <input type="text" name="search" placeholder="Department, Professor, Class" style="width: 250px; height: 20px">
+      <input type="submit" value="Search">
+     </form>
+
+     <div class="container-fluid" align="center">
         <div class="row">
             <div class="col-xs-4">
                 <h3>Departments</h3>
@@ -82,7 +90,7 @@
             </div>
 
              <div class="col-xs-4">
-                <h2>Names</h2>
+                <h2>Professors</h2>
                 <p></p>
             </div>
 
@@ -100,7 +108,7 @@
                     <p><code>Built by Braden Katzman</code></p>
                 </footer>
             </div>
-        </div>
+    </div>
 	
 	<!-- include bootstrap JS files -->
 	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
