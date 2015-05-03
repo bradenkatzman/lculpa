@@ -45,7 +45,7 @@ def results():
 	strrequest = str(request)
 	searchKey, garbage = (strrequest[47:]).split('\'')
 	print searchKey
-	return render_template('results.html', searchKey=searchKey, reviews=db.review)
+	return render_template('results.html', searchKey=searchKey, db=Review.objects)
 
 @app.route("/completedreview", methods=['GET'])
 def completed():

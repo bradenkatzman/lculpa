@@ -10,20 +10,24 @@
 	<body>
 
 		<div id="results">
-			<h1>results</h1>
-
-			{% for review in reviews.all() %}
-				Professor Name: {{review.name}}<br>
-		        Department: {{review.department}}<br>
-		        Class: {{review.classes}}<br>
-		        Summary: {{review.summary}}<br> 
-		        Workload: {{review.workload}}<br> 
-		    {% endfor %}
-
+			<h1>Results</h1>
 			<form action="/" method="get">
 					<input type="submit" value="Back to LCULPA">
 			</form>
 		</div>
+
+			<div id="data">
+				{% for review in db %}
+					Professor Name: {{review.name}}<br>
+			        Department: {{review.department}}<br>
+			        Class: {{review.classes}}<br>
+			        Summary: {{review.summary}}<br> 
+			        Workload: {{review.workload}}<br>
+
+			        <br>
+			        <br>
+			    {% endfor %}
+			</div>
 	</body>
 
 	</html>

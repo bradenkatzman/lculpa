@@ -18,21 +18,6 @@
       <input type="submit" value="Submit Review">
      </form>
     
-    <!-- loops through review objects -- enhanced for loop -->
-    {% for review in reviews %}
-
-    <p> 
-        Professor Name: {{review.name}}<br>
-        Department: {{review.department}}<br>
-        Class: {{review.classes}}<br>
-        Summary: {{review.summary}}<br> 
-        Workload: {{review.workload}}<br> 
-    </p>
-
-    {% endfor %}
-  </div>
-
-
   <!-- include bootstrap JS files -->
   <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
