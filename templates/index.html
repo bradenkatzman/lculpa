@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta http-equiv='Content-type' content='text/html; charset=utf-8'>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 		<title>LCULPA</title>
-		<link rel="stylesheet" href="stylesheet.css" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}" >
 	</head>
 
 	<body>
@@ -102,8 +102,9 @@
         </div>
 	
 	<!-- include bootstrap JS files -->
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
 	
 	</body>
 </html>
