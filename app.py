@@ -32,13 +32,17 @@ def review():
 		review = Review(name=name, department=department, classes=classes,
 			summary=summary, workload=workload)
 		review.save()
-		return redirect("/")
+		return redirect("/completedreview")
 	return render_template('home.html', reviews=Review.objects)
 
 
 @app.route("/", methods=['GET'])
 def index():
 	return render_template('index.html')
+
+@app.route("/completedreview", methods=['GET'])
+def completed():
+	return render_template('completedreview.html')
 
 if __name__ == "__main__":
     app.run()

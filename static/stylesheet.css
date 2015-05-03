@@ -5,12 +5,20 @@
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #333;
+    color: red;
 }
 
 .page-header
 {
-	background-color: red;
+	background-color: AntiqueWhite;
+	border-top: solid;
+	border-bottom: solid;
+	border-color: red;
+}
+
+h2
+{
+	text-align: center;
 }
 
 h5
