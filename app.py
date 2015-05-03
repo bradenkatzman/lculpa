@@ -44,12 +44,16 @@ def index():
 def results():
 	strrequest = str(request)
 	searchKey, garbage = (strrequest[47:]).split('\'')
-	print searchKey
+	# print db.collections.find({"name":searchKey})
 	return render_template('results.html', searchKey=searchKey, db=Review.objects)
 
 @app.route("/completedreview", methods=['GET'])
 def completed():
 	return render_template('completedreview.html')
+
+@app.route("/contact", methods=['GET'])
+def contact():
+	return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run()
