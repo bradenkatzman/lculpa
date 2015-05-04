@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<title>Silver Bush Professors</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}" >
+	</head>
+	<body>
+			<div id="results">
+			<h1>Silver Bush Professors</h1>
+			<form action="/" method="get">
+					<input type="submit" value="Back to LCULPA">
+			</form>
+		</div>
+
+<br><br>
+
+		<div id="data">
+		{% for result in kalmanofskyreviews %}
+				<div id="result" class="container-fluid">
+					<strong>Professor Name:</strong> {{result.name}}<br>
+			        <strong>Department:</strong> {{result.department}}<br>
+			        <strong>Class:</strong> {{result.classes}}<br>
+			       	<strong>Summary:</strong> {{result.summary}}<br> 
+			        <strong>Workload:</strong> {{result.workload}}<br>
+			    </div>
+			    <br><br>
+		{% endfor %}
+
+	</body>
+</html>
+

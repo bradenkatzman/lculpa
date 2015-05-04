@@ -51,6 +51,20 @@ def results():
 	return render_template('results.html', nameresults=nameresults, 
 		departmentresults=departmentresults, classesresults=classesresults)
 
+@app.route('/goldbush', methods=['GET'])
+def goldbush():
+	kohnreviews = Review.objects(name="Shira Kohn")
+	androphyreviews = Review.objects(name="Ron Androphy")
+	gampelreviews = Review.objects(name="Benjamin R. Gampel")
+	return render_template('goldbush.html', kohnreviews=kohnreviews, 
+		androphyreviews=androphyreviews, gampelreviews=gampelreviews)
+
+@app.route('/silverbush', methods=['GET'])
+def silverbush():
+	kalmanofskyreviews = Review.objects(name="Amy Kalmanofsky")
+	return render_template('silverbush.html', kalmanofskyreviews=kalmanofskyreviews
+		)
+
 @app.route("/completedreview", methods=['GET'])
 def completed():
 	return render_template('completedreview.html')
