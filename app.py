@@ -72,7 +72,7 @@ def results():
 	
 	# 47:end is search key through end of string, then split key
 	# to get rid of string past search
-	searchKey, garbage = (strrequest[58:]).split('\'')
+	searchKey, garbage = (strrequest[54:]).split('\'')
 	
 	# replace + with space
 	searchKey = searchKey.replace("+", " ")
