@@ -6,21 +6,21 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
-if "host" in os.environ:
+if "MONGODB_HOST" in os.environ:
 	app.config['MONGODB_HOST'] = os.environ['MONGODB_HOST']
 else:
 	host = 'localhost'
 
-if "port" in os.environ:
+if "MONGODB_PORT" in os.environ:
 	app.config['MONGODB_PORT'] = os.environ['MONGODB_PORT']
 else:
 	port = 27017
 
-if "username" in os.environ:
+if "MONGODB_USERNAME" in os.environ:
 	app.config['MONGODB_USERNAME'] = os.environ['MONGODB_USERNAME']
 
 
-if "password" in os.environ:
+if "MONGODB_PASSWORD" in os.environ:
 	app.config['MONGODB_PASSWORD'] = os.environ['MONGODB_PASSWORD']
 
 app.config['MONGODB_DB'] = 'lculpa'
