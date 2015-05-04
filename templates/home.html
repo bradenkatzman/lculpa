@@ -17,7 +17,23 @@
 
      <form action="/submitreview" method="post" enctype="multipart/form-data"> 
       <input type="text" name="name" placeholder="Professor Name" style="width: 150px; height: 20px"><br><br>
-      <input type="text" name="department" placeholder="Department" style="width: 150px; height: 20px"><br><br>
+ 
+      <select name="department">
+        <option value="Ancient Judaism">Ancient Judaism</option> 
+        <option value="Hebrew Bible and Its Interpretation">Hebrew Bible and Its Interpretation</option>
+        <option value="Jewish Art and Visual Culture">Jewish Art and Visual Culture</option>
+        <option value="Jewish History">Jewish History</option>
+        <option value="Jewish Literature">Jewish Literature</option>
+        <option value="Jewish Music">Jewish Music</option>
+        <option value="Jewish Thought">Jewish Thought</option>
+        <option value="Jewish Gender and Women Studies">Jewish Gender and Women Studies</option>
+        <option value="Medieval and Early Modern Jewish Studies">Medieval and Early Modern Jewish Studies</option>
+        <option value="Midrash and Scriptural Interpretation">Midrash and Scriptural Interpretation</option>
+        <option value="Modern Jewish Studies">Modern Jewish Studies</option>
+        <option value="Talmud and Rabbinics">Talmud and Rabbinics</option>
+      </select>
+      <br><br>
+      
       <input type="text" name="classes" placeholder="Course" style="width: 150px; height: 20px"><br><br>
       <input type="text" name="summary" placeholder="Review" style="width: 600px; height: 250px"><br><br>
       <input type="text" name="workload" placeholder="Workload" style="width: 600px; height: 250px"><br><br>

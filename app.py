@@ -24,7 +24,11 @@ class Review(db.Document):
 def review():
 	if request.method == 'POST':
 		name = request.form["name"]
+		print "name: "
+		print name
 		department = request.form["department"]
+		print "department: "
+		print department
 		classes = request.form["classes"]
 		summary = request.form["summary"]
 		workload = request.form["workload"]
@@ -44,9 +48,10 @@ def index():
 def results():
 	strrequest = str(request)
 	searchKey, garbage = (strrequest[47:]).split('\'')
+	searchKey = searchKey.replace("+", " ")
 	nameresults = Review.objects(name=searchKey)
-	departmentresults = Review.objects(department=searchKey)
 	classesresults = Review.objects(classes=searchKey)
+	departmentresults = Review.objects(department=searchKey)
 	return render_template('results.html', nameresults=nameresults, 
 		departmentresults=departmentresults, classesresults=classesresults)
 
