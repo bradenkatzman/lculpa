@@ -69,11 +69,10 @@ def index():
 def results():
 	#  cast request to string to parse for search key
 	strrequest = str(request)
-	# print strrequest
 	
 	# 47:end is search key through end of string, then split key
 	# to get rid of string past search
-	searchKey, garbage = (strrequest[47:]).split('\'')
+	searchKey, garbage = (strrequest[58:]).split('\'')
 	
 	# replace + with space
 	searchKey = searchKey.replace("+", " ")
