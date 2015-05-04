@@ -15,10 +15,17 @@
 
   <div class="container-fluid">
 
+     <!-- script to disable enter button as submission - must press button -->
+     <script>
+      function noenter() {
+      return !(window.event && window.event.keyCode == 13);
+      }
+    </script>
+
      <form action="/submitreview" method="post" enctype="multipart/form-data"> 
 
       <!-- dropdown menu for professors -->
-      <select name="name">
+      <select name="name" onKeyPress="return noenter()">
         <option value="Ron Androphy">Ron Androphy</option>
         <option value="Carl Astor">Carl Astor</option>
         <option value="Noah Bickart">Noah Bickart</option>
@@ -73,7 +80,7 @@
  
 
       <!-- dropdown menu for departments -->
-      <select name="department">
+      <select name="department" onKeyPress="return noenter()">
         <option value="Ancient Judaism">Ancient Judaism</option> 
         <option value="Hebrew Bible and Its Interpretation">Hebrew Bible and Its Interpretation</option>
         <option value="Jewish Art and Visual Culture">Jewish Art and Visual Culture</option>
@@ -90,13 +97,13 @@
       <br><br>
       
       <!-- textbox for class input -->
-      <input type="text" name="classes" placeholder="Course e.g. Medieval Jewish History" style="width: 250px; height: 20px"><br><br>
+      <input type="text" name="classes" onKeyPress="return noenter()" placeholder="Course e.g. Medieval Jewish History" style="width: 250px; height: 20px"><br><br>
       
       <!-- textbox for summary input -->
-      <input type="text" name="summary" placeholder="Review e.g. YOU MUST TAKE THIS CLASS! Professor Gampel's lecture style..." style="width: 600px; height: 250px"><br><br>
+      <input type="text" name="summary" onKeyPress="return noenter()" placeholder="Review e.g. YOU MUST TAKE THIS CLASS! Professor Gampel's lecture style..." style="width: 600px; height: 250px"><br><br>
       
       <!-- textbox for workload input -->
-      <input type="text" name="workload" placeholder="Workload e.g. 50-80 pages of reading per week, 1 final essay, 1 in-class midterm..." style="width: 600px; height: 250px"><br><br>
+      <input type="text" name="workload" onKeyPress="return noenter()" placeholder="Workload e.g. 50-80 pages of reading per week, 1 final essay, 1 in-class midterm..." style="width: 600px; height: 250px"><br><br>
       
       <!-- submission button -->
       <input type="submit" value="Submit Review">
