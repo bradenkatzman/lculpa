@@ -16,35 +16,41 @@
 			</form>
 		</div>
 
+		<br><br>
+
 			<div id="data">
 				{% for result in nameresults %}
-					Professor Name: {{result.name}}<br>
-			        Department: {{result.department}}<br>
-			        Class: {{result.classes}}<br>
-			       	Summary: {{result.summary}}<br> 
-			        Workload: {{result.workload}}<br>
-			        <br>
-			        <br>
+				<div id="result" class="container-fluid">
+					<strong>Professor Name:</strong> {{result.name}}<br>
+			        <strong>Department:</strong> {{result.department}}<br>
+			        <strong>Class:</strong> {{result.classes}}<br>
+			       	<strong>Summary:</strong> {{result.summary}}<br> 
+			        <strong>Workload:</strong> {{result.workload}}<br>
+			    </div>
+			    <br><br>
 			    {% endfor %}
 			    
 			    {% for result in departmentresults %}
-					Professor Name: {{result.name}}<br>
-			        Department: {{result.department}}<br>
-			        Class: {{result.classes}}<br>
-			       	Summary: {{result.summary}}<br> 
-			        Workload: {{result.workload}}<br>
-			        <br>
+					<div id="result" class="container-fluid">
+					<strong>Professor Name:</strong> {{result.name}}<br>
+			        <strong>Department:</strong> {{result.department}}<br>
+			        <strong>Class:</strong> {{result.classes}}<br>
+			       	<strong>Summary:</strong> {{result.summary}}<br> 
+			        <strong>Workload:</strong> {{result.workload}}<br>
+			    </div>
+			    	<br>
 			        <br>
 			    {% endfor %}
 			    
 			    {% for result in classesresults %}
-					Professor Name: {{result.name}}<br>
-			        Department: {{result.department}}<br>
-			        Class: {{result.classes}}<br>
-			       	Summary: {{result.summary}}<br> 
-			        Workload: {{result.workload}}<br>
-			        <br>
-			        <br>
+					<div id="result" class="container-fluid">
+					<strong>Professor Name:</strong> {{result.name}}<br>
+			        <strong>Department:</strong> {{result.department}}<br>
+			        <strong>Class:</strong> {{result.classes}}<br>
+			       	<strong>Summary:</strong> {{result.summary}}<br> 
+			        <strong>Workload:</strong> {{result.workload}}<br>
+			    </div>
+			    <br><br>
 			    {% endfor %}
 			</div>
 	</body>

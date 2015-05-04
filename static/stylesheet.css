@@ -60,9 +60,18 @@ h5
 #data
 {
 	padding-left: 40px;
+	padding-right: 40px;
 }
 
 #contact
 {
 	text-align: center;
+}
+
+#result
+{
+	background-color: lightblue;
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
 }
