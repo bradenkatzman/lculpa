@@ -1,13 +1,26 @@
 from flask import Flask, render_template, request, redirect
 from flask.ext.mongoengine import MongoEngine
+import os
 
 app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
+if "host" in os.environ:
+	host = os.environ['HOST']
+else:
+	host = 'localhost'
+
+if "port" in os.environ:
+	port = os.environ['PORT']
+else:
+	port = 27017
+
 # MongoDB Config
 app.config['MONGODB_SETTINGS'] = {
-     'host': 'mongodb://localhost/lculpa'
+     'db': 'lculpa',
+     'host': host,
+     'port': port
 }
 
 # Create database connection object
