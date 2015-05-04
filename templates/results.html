@@ -17,13 +17,32 @@
 		</div>
 
 			<div id="data">
-				{% for review in db %}
-					Professor Name: {{review.name}}<br>
-			        Department: {{review.department}}<br>
-			        Class: {{review.classes}}<br>
-			        Summary: {{review.summary}}<br> 
-			        Workload: {{review.workload}}<br>
-
+				{% for result in nameresults %}
+					Professor Name: {{result.name}}<br>
+			        Department: {{result.department}}<br>
+			        Class: {{result.classes}}<br>
+			       	Summary: {{result.summary}}<br> 
+			        Workload: {{result.workload}}<br>
+			        <br>
+			        <br>
+			    {% endfor %}
+			    
+			    {% for result in departmentresults %}
+					Professor Name: {{result.name}}<br>
+			        Department: {{result.department}}<br>
+			        Class: {{result.classes}}<br>
+			       	Summary: {{result.summary}}<br> 
+			        Workload: {{result.workload}}<br>
+			        <br>
+			        <br>
+			    {% endfor %}
+			    
+			    {% for result in classesresults %}
+					Professor Name: {{result.name}}<br>
+			        Department: {{result.department}}<br>
+			        Class: {{result.classes}}<br>
+			       	Summary: {{result.summary}}<br> 
+			        Workload: {{result.workload}}<br>
 			        <br>
 			        <br>
 			    {% endfor %}

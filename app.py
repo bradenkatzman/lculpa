@@ -44,8 +44,11 @@ def index():
 def results():
 	strrequest = str(request)
 	searchKey, garbage = (strrequest[47:]).split('\'')
-	# print db.collections.find({"name":searchKey})
-	return render_template('results.html', searchKey=searchKey, db=Review.objects)
+	nameresults = Review.objects(name=searchKey)
+	departmentresults = Review.objects(department=searchKey)
+	classesresults = Review.objects(classes=searchKey)
+	return render_template('results.html', nameresults=nameresults, 
+		departmentresults=departmentresults, classesresults=classesresults)
 
 @app.route("/completedreview", methods=['GET'])
 def completed():
