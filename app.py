@@ -7,21 +7,25 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 
 if "host" in os.environ:
-	host = os.environ['HOST']
+	app.config['MONGODB_HOST'] = os.environ['MONGODB_HOST']
 else:
 	host = 'localhost'
 
 if "port" in os.environ:
-	port = os.environ['PORT']
+	app.config['MONGODB_PORT'] = os.environ['MONGODB_PORT']
 else:
 	port = 27017
 
-# MongoDB Config
-app.config['MONGODB_SETTINGS'] = {
-     'db': 'lculpa',
-     'host': host,
-     'port': port
-}
+if "username" in os.environ:
+	app.config['MONGODB_USERNAME'] = os.environ['MONGODB_USERNAME']
+
+
+if "password" in os.environ:
+	app.config['MONGODB_PASSWORD'] = os.environ['MONGODB_PASSWORD']
+
+app.config['MONGODB_DB'] = 'lculpa'
+
+
 
 # Create database connection object
 db = MongoEngine(app)
