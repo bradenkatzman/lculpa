@@ -24,15 +24,10 @@ class Review(db.Document):
 def review():
 	if request.method == 'POST':
 		name = request.form["name"]
-		print "name: "
-		print name
 		department = request.form["department"]
-		print "department: "
-		print department
 		classes = request.form["classes"]
 		summary = request.form["summary"]
 		workload = request.form["workload"]
-
 		review = Review(name=name, department=department, classes=classes,
 			summary=summary, workload=workload)
 		review.save()
@@ -47,6 +42,7 @@ def index():
 @app.route('/results', methods=['GET'])
 def results():
 	strrequest = str(request)
+	print strrequest
 	searchKey, garbage = (strrequest[47:]).split('\'')
 	searchKey = searchKey.replace("+", " ")
 	nameresults = Review.objects(name=searchKey)
