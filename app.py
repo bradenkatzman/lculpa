@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask.ext.mongoengine import MongoEngine
+from datetime import datetime
 import os
 
 app = Flask(__name__)
@@ -37,6 +38,7 @@ class Review(db.Document):
     classes = db.StringField(required=True)
     summary = db.StringField(required=True)
     workload = db.StringField(required=True)
+    date = str(datetime.now())
 
 @app.route("/submitreview", methods=['GET', 'POST'])
 def review():
@@ -70,8 +72,7 @@ def results():
 	#  cast request to string to parse for search key
 	strrequest = str(request)
 	
-	# 47:end is search key through end of string, then split key
-	# to get rid of string past search
+	# parse to = for search key
 	garbage1, searchKey = strrequest.split('=')
 	searchKey, garbag2 = searchKey.split('\'')
 	
