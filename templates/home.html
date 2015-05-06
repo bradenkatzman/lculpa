@@ -22,7 +22,7 @@
       }
     </script>
 
-     <form action="/submitreview" method="post" enctype="multipart/form-data"> 
+     <form id="reviewform" action="/submitreview" method="post" enctype="multipart/form-data"> 
 
       <!-- dropdown menu for professors -->
       <select name="name" onKeyPress="return noenter()">
@@ -100,15 +100,20 @@
       <input type="text" name="classes" onKeyPress="return noenter()" placeholder="Course e.g. Medieval Jewish History" style="width: 250px; height: 20px"><br><br>
       
       <!-- textbox for summary input -->
-      <input type="text" name="summary" onKeyPress="return noenter()" placeholder="Review e.g. YOU MUST TAKE THIS CLASS! Professor Gampel's lecture style..." style="width: 600px; height: 250px"><br><br>
+      <p><strong>Review e.g. YOU MUST TAKE THIS CLASS! Professor Gampel's lecture style..."</strong></p>
+      <textarea form="reviewform" name="summary" onKeyPress="return noenter()" cols ="100" style="width: 600px; height: 250px"></textarea><br><br>
       
       <!-- textbox for workload input -->
-      <input type="text" name="workload" onKeyPress="return noenter()" placeholder="Workload e.g. 50-80 pages of reading per week, 1 final essay, 1 in-class midterm..." style="width: 600px; height: 250px"><br><br>
+      <p><strong>Workload e.g. 50-80 pages of reading per week, 1 final essay, 1 in-class midterm</strong></p>
+      <textarea form="reviewform" name="workload" onKeyPress="return noenter()" cols ="100" style="width: 600px; height: 250px"></textarea><br><br>
+
+      <input type="text" name="date" onKeyPress="return noenter()" placeholder="Please enter today's date e.g. 5/5/15" style="width: 250px; height: 20px"><br><br>
       
       <!-- submission button -->
       <input type="submit" value="Submit Review">
      </form>
     </div>
+    <br><br>
     
   <!-- include bootstrap JS files -->
   <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>

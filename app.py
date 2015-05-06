@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
 from flask.ext.mongoengine import MongoEngine
-from datetime import datetime
 import os
 
 app = Flask(__name__)
@@ -38,7 +37,7 @@ class Review(db.Document):
     classes = db.StringField(required=True)
     summary = db.StringField(required=True)
     workload = db.StringField(required=True)
-    date = str(datetime.now())
+    date = db.StringField(required=True)
 
 @app.route("/submitreview", methods=['GET', 'POST'])
 def review():
@@ -50,10 +49,11 @@ def review():
 		classes = request.form["classes"]
 		summary = request.form["summary"]
 		workload = request.form["workload"]
+		date = request.form["date"]
 		
 		# create and save new review object
 		review = Review(name=name, department=department, classes=classes,
-			summary=summary, workload=workload)
+			summary=summary, workload=workload, date=date)
 		review.save()
 
 		# redirect to completed page

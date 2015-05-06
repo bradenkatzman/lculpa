@@ -62,12 +62,14 @@ h5
 #results
 {
 	text-align: center;
+	word-wrap: break-word;
 }
 
 #data
 {
 	padding-left: 40px;
 	padding-right: 40px;
+	word-wrap: break-word;
 }
 
 #contact
