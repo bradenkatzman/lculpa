@@ -78,6 +78,10 @@ def results():
 	
 	# replace + with space
 	searchKey = searchKey.replace("+", " ")
+
+	# if searchKey is empty, return all results
+	if not searchKey:
+		return render_template('allresults.html', reviews=Review.objects)
 	
 	# search database using searchKey
 	nameresults = Review.objects(name=searchKey)
