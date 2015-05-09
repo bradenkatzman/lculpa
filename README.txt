@@ -33,3 +33,5 @@ git push -f heroku master
 
 start app locally:
 $ foreman start
+
+To look at all reviews, press search on empty input
