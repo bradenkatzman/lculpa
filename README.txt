@@ -31,7 +31,7 @@ $ git push -f origin master
 push commits to heroku:
 git push -f heroku master
 
-start app locally:
+start app locally (port 27017):
 $ foreman start
 
 To look at all reviews, press search on empty input
