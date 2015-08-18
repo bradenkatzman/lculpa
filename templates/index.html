@@ -38,16 +38,20 @@
     </nav>
     <br><br>
     <div class="page-header">
-     <h1>LCULPA<br><small> An App for the List College Community </small></h1>
- </div>
+       <h1>LCULPA<br><small> An App for the List College Community </small></h1>
+   </div>
 
- <div style="background-color:lightsteelblue !important"class="jumbotron">
+   <div style="background-color:lightsteelblue !important"class="jumbotron">
     <div class="container-fluid">
         <p>
-           <strong>Welcome to LCULPA!</strong><br>
-           LCULPA was founded to give List College students an opportunity to speak their minds, and to share the wisdom that they have gleaned from the precious time they've spent in classrooms ahead of you - and for you to do the same for others!
-       </p>
-   </div>
+         <strong>Welcome to LCULPA!</strong><br>
+         LCULPA was founded to give List College students an opportunity to speak their minds, and to share the wisdom that they have gleaned from the precious time they've spent in classrooms ahead of you - and for you to do the same for others!
+     </p>
+     <p><strong>LCSC Online</strong><br>
+        Check out List College Student Council's NEW website for events around campus, resources, and more!<br>
+        <a href="http://lcsconline.com">LCSCOnline</a>
+    </p>
+</div>
 </div>
 
 <h2><em>Explore</em></h2>
@@ -55,12 +59,12 @@
 <br>
 <div class="container-fluid" align="center">
 
-   <form action="/results" method="get"> 
-      <input type="text" name="search" placeholder="Department, Professor, Class" style="width: 250px; height: 20px">
-      <input type="submit" value="Search">
-  </form>
+ <form action="/results" method="get"> 
+  <input type="text" name="search" placeholder="Department, Professor, Class" style="width: 250px; height: 20px">
+  <input type="submit" value="Search">
+</form>
 
-  <div class="container-fluid" align="center">
+<div class="container-fluid" align="center">
     <div class="row">
         <div class="col-xs-4">
             <h3>Departments</h3>
@@ -79,35 +83,9 @@
                 <option value="results?search=Modern+Jewish+Studies">Modern Jewish Studies</option>
                 <option value="results?search=Talmud+and+Rabbinics">Talmud and Rabbinics</option>
             </select>
-            <!-- <p>
-             <a href="results?search=Ancient+Judaism">Ancient Judaism</a><br><br>
+        </div>
 
-             <a href="results?search=Hebrew+Bible+and+Its+Interpretation">Hebrew Bible and Its Interpretation</a><br><br>
-
-             <a href="results?search=Hebrew">Hebrew</a><br><br>
-
-             <a href="results?search=Jewish+Art+and+Visual+Culture">Jewish Art and Visual Culture</a> <br><br>
-
-             <a href="results?search=Jewish+History">Jewish History</a> <br><br>
-
-             <a href="results?search=Jewish+Literature">Jewish Literature</a><br><br>
-
-             <a href="results?search=Jewish+Music">Jewish Music</a> <br><br>
-
-             <a href="results?search=Jewish+Thought">Jewish Thought</a> <br><br>
-
-             <a href="results?search=Jewish+Gender+and+Women+Studies">Jewish Gender and Women Studies</a> <br><br>
-
-             <a href="results?search=Medieval+and+Early+Modern+Jewish+Studies">Medieval and Early Modern Jewish Studies</a><br><br>
-
-             <a href="results?search=Midrash+and+Scriptural+Interpretation">Midrash and Scriptural Interpretation</a><br><br>
-
-             <a href="results?search=Modern+Jewish+Studies">Modern Jewish Studies</a><br><br>
-
-             <a href="results?search=Talmud+and+Rabbinics">Talmud and Rabbinics</a></p> -->
-         </div>
-
-         <div class="col-xs-4">
+        <div class="col-xs-4">
             <h2>Professors</h2>
             <select id="professors">
                 <option value="">--</option>
@@ -163,59 +141,6 @@
                 <option value="results?search=Burton+Visotzky">Burton Visotzky</option>
                 <option value="results?search=Jack+Wertheimer">Jack Wertheimer</option>
             </select>
-            <!-- <a href="results?search=Ron+Androphy">Ron Androphy,</a>
-            <a href="results?search=Carl+Astor">Carl Astor,</a>
-            <a href="results?search=Noah+Bickart">Noah Bickart,</a><br>
-            <a href="results?search=Yonatan+Brafman">Yonatan Brafman,</a>
-            <a href="results?search=Susan+Chevlowe">Susan Chevlowe,</a>
-            <a href="results?search=Alan+M.+Cooper">Alan M. Cooper,</a>
-            <a href="results?search=Neil+Danzig">Neil Danzig,</a><br>
-            <a href="results?search=Eliezer+B.+Diamond">Eliezer B. Diamond,</a>
-            <a href="results?search=Arnold+M.+Eisen">Arnold M. Eisen,</a>
-            <a href="results?search=Eitan+Fishbane">Eitan Fishbane,</a><br>
-            <a href="results?search=David+Fishman">David Fishman,</a>
-            <a href="results?search=Shamma+Friedman">Shamma Friedman,</a>
-            <a href="results?search=Benjamin+R.+Gampel">Benjamin R. Gampel,</a><br>
-            <a href="results?search=Stephen+A.+Garfinkel">Stephen A. Garfinkel,</a>
-            <a href="results?search=Stephen+A.+Geller">Stephen A. Geller,</a>
-            <a href="results?search=Edward+M.+Gershfield">Edward M. Gershfield,</a><br>
-            <a href="results?search=Neil+Gillman">Neil Gillman,</a>
-            <a href="results?search=Robert+A.+Harris">Robert A. Harris,</a>
-            <a href="results?search=Judith+Hauptman">Judith Hauptman,</a><br>
-            <a href="results?search=David+Hoffman">David Hoffman,</a>
-            <a href="results?search=Alison+Joseph">Alison Joseph,</a>
-            <a href="results?search=Amy+Kalmanofsky">Amy Kalmanofsky,</a><br>
-            <a href="results?search=Richard+L.+Kalmin">Richard L. Kalmin,</a>
-            <a href="results?search=Shira+Kohn">Shira Kohn,</a>
-            <a href="results?search=David+C.+Kraemer">David C. Kraemer,</a><br>
-            <a href="results?search=Nitza+Krohn">Nitza Krohn,</a>
-            <a href="results?search=Marjorie+Lehman">Marjorie Lehman,</a>
-            <a href="results?search=Anne+Lerner">Anne Lerner,</a><br>
-            <a href="results?search=Nachum+Lerner">Nachum Lerner,</a>
-            <a href="results?search=Barbara+Mann">Barbara Mann,</a>
-            <a href="results?search=Vivian+Mann">Vivian Mann,</a>
-            <a href="results?search=David+Marcus">David Marcus,</a><br>
-            <a href="results?search=Jonathan+Milgram">Jonathan Milgram,</a>
-            <a href="results?search=Eric+Miller">Eric Miller,</a>
-            <a href="results?search=Alan+Mintz">Alan Mintz,</a><br>
-            <a href="results?search=Alan+Mittleman">Alan Mittleman,</a>
-            <a href="results?search=Hagay+Nahmias">Hagay Nahmias,</a>
-            <a href="results?search=Edna+Nahshon">Edna Nahshon,</a>
-            <a href="results?search=Nina+Nesher">Nina Nesher,</a><br>
-            <a href="results?search=Joel+Roth">Joel Roth,</a>
-            <a href="results?search=Zalman+Rothschild">Zalman Rothschild,</a>
-            <a href="results?search=Tamara+Ruben">Tamara Ruben,</a><br>
-            <a href="results?search=Tsipi+Rubin">Tsipi Rubin,</a>
-            <a href="results?search=Raymond+P.+Scheindlin">Raymond P. Scheindlin,</a>
-            <a href="results?search=Ismar+Schorsch">Ismar Schorsch,</a><br>
-            <a href="results?search=Marcus+Schwartz">Marcus Schwartz,</a>
-            <a href="results?search=Leonard+Sharzer">Leonard Sharzer,</a>
-            <a href="results?search=Stephanie+Siegmund">Stephanie Siegmund,</a><br>
-            <a href="results?search=Brian+Smollett">Brian Smollett,</a>
-            <a href="results?search=Benjamin+Sommer">Benjamin Sommer,</a><br>
-            <a href="results?search=Burton+Visotzky">Burton Visotzky,</a>
-            <a href="results?search=Jack+Wertheimer">Jack Wertheimer</a> -->
-
         </div>
 
         <div class="col-xs-4">
@@ -230,15 +155,7 @@
         </div>
     </div>
 
-    <h5> <a href="http://lcsconline.com">LCSC Website</a></h5>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <footer>
-                <p><code>Built by <a href="http://bradenkatzman.github.io">Braden Katzman</a></code></p>
-            </footer>
-        </div>
-    </div>
+    <h5><code>Built by <a href="http://bradenkatzman.github.io">Braden Katzman</a></code></h5>
 
     <!-- include bootstrap JS files -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
