@@ -60,7 +60,7 @@ def review():
 		return redirect("/completedreview")
 	
 	# if HTTP method is 'GET', return submission form
-	return render_template('home.html', reviews=Review.objects)
+	return render_template('home.html')
 
 # home page
 @app.route("/", methods=['GET'])
@@ -95,13 +95,12 @@ def results():
 @app.route('/goldbush', methods=['GET'])
 def goldbush():
 	# search database for gold professors
-	kohnreviews = Review.objects(name="Shira Kohn")
 	androphyreviews = Review.objects(name="Ron Androphy")
 	gampelreviews = Review.objects(name="Benjamin R. Gampel")
 	
 	# return goldbush.html and cursor objects to gold professors
-	return render_template('goldbush.html', kohnreviews=kohnreviews, 
-		androphyreviews=androphyreviews, gampelreviews=gampelreviews)
+	return render_template('goldbush.html', androphyreviews=androphyreviews,
+	 gampelreviews=gampelreviews)
 
 @app.route('/silverbush', methods=['GET'])
 def silverbush():
