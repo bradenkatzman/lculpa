@@ -33,6 +33,18 @@
 			    <br><br>
 		{% endfor %}
 
+		{% for result in kohnreviews %}
+					<div id="result" class="container-fluid">
+					<strong>Professor Name:</strong> {{result.name}}<br>
+			        <strong>Department:</strong> {{result.department}}<br>
+			        <strong>Class:</strong> {{result.classes}}<br>
+			       	<strong>Summary:</strong> {{result.summary}}<br><br> 
+			        <strong>Workload:</strong> {{result.workload}}<br><br>
+			        <strong>Review Submitted:</strong> {{result.date}}<br>
+			    </div>
+			    <br><br>
+		{% endfor %}
+
 		{% for result in gampelreviews %}
 				<div id="result" class="container-fluid">
 					<strong>Professor Name:</strong> {{result.name}}<br>

@@ -97,10 +97,11 @@ def goldbush():
 	# search database for gold professors
 	androphyreviews = Review.objects(name="Ron Androphy")
 	gampelreviews = Review.objects(name="Benjamin R. Gampel")
+	kohnreviews = Review.objects(name="Shira Kohn")
 	
 	# return goldbush.html and cursor objects to gold professors
 	return render_template('goldbush.html', androphyreviews=androphyreviews,
-	 gampelreviews=gampelreviews)
+	 gampelreviews=gampelreviews, kohnreviews=kohnreviews)
 
 @app.route('/silverbush', methods=['GET'])
 def silverbush():
