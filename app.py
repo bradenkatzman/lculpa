@@ -60,7 +60,7 @@ def review():
 		return redirect("/completedreview")
 	
 	# if HTTP method is 'GET', return submission form
-	return render_template('home.html')
+	return render_template('submit.html')
 
 # home page
 @app.route("/", methods=['GET'])
